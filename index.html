@@ -1,59 +1,188 @@
-export default function LandingTributario() {
-<h4 className="text-2xl font-semibold mb-3 text-teal-700">Consultoria Tributária</h4>
-<p>Orientação personalizada para reduzir riscos fiscais e otimizar a carga tributária de sua empresa.</p>
-</div>
-<div className="bg-teal-50 p-6 rounded-2xl shadow-lg">
-<h4 className="text-2xl font-semibold mb-3 text-teal-700">Defesa em Processos Fiscais</h4>
-<p>Atuação em contencioso administrativo e judicial, com foco na defesa de autuações e cobranças indevidas.</p>
-</div>
-<div className="bg-teal-50 p-6 rounded-2xl shadow-lg">
-<h4 className="text-2xl font-semibold mb-3 text-teal-700">Planejamento Tributário</h4>
-<p>Estratégias legais para maximizar a eficiência fiscal e garantir conformidade com a legislação vigente.</p>
-</div>
-</div>
-</div>
-</section>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Carolina Mendes - Direito Tributário</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #007bff, #00cba9, #38ef7d);
+      color: #fff;
+    }
 
-{/* About Section */}
-<section id="sobre" className="bg-gradient-to-r from-green-500 to-teal-600 text-white py-20 px-6">
-<div className="max-w-5xl mx-auto text-center">
-<h3 className="text-4xl font-bold mb-6">Sobre a Profissional</h3>
-<p className="text-lg leading-relaxed max-w-3xl mx-auto">
-Com ampla experiência no Direito Tributário, a Dra. Carolina Mendes atua há mais de 10 anos auxiliando empresas na gestão eficiente de tributos, prevenindo litígios e promovendo soluções jurídicas seguras e personalizadas.
-</p>
-</div>
-</section>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.2);
+    }
 
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-{/* Contact Section */}
-<section id="contato" className="bg-white text-gray-800 py-16 px-6">
-<div className="max-w-4xl mx-auto text-center">
-<h3 className="text-3xl font-bold mb-6 text-teal-600">Entre em Contato</h3>
-<p className="mb-8 text-lg">Agende uma consulta para discutir as necessidades jurídicas da sua empresa.</p>
-<a
-href="https://wa.me/5500000000000"
-target="_blank"
-rel="noopener noreferrer"
-className="bg-green-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:bg-green-400 transition"
->
-Contatar via WhatsApp
-</a>
-</div>
-</section>
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-{/* Footer */}
-<footer className="bg-gray-900 text-gray-300 py-6 mt-auto">
-<div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-<p className="mb-4 md:mb-0">© {new Date().getFullYear()} Dra. Carolina Mendes - Todos os direitos reservados</p>
-<div className="flex space-x-4 text-2xl">
-<a href="#" className="hover:text-teal-400"><i className="ri-linkedin-fill"></i></a>
-<a href="#" className="hover:text-teal-400"><i className="ri-instagram-fill"></i></a>
-<a href="#" className="hover:text-teal-400"><i className="ri-facebook-circle-fill"></i></a>
-</div>
-</div>
-</footer>
-</div>
-);
-}
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero a {
+      background: #ffc107;
+      color: #333;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background: #ffda47;
+    }
+
+    section {
+      padding: 80px 20px;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 32px;
+      color: #00b894;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #e8f9f3;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h4 {
+      color: #007b83;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .sobre {
+      background: linear-gradient(90deg, #00cba9, #00a7b7);
+      color: #fff;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer .social {
+      margin-top: 10px;
+    }
+
+    footer .social a {
+      color: #00cba9;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .social a:hover {
+      color: #38ef7d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dra. Carolina Mendes</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Especialista em Direito Tributário e Planejamento Fiscal Estratégico</h2>
+    <p>Assessoria jurídica para empresas que buscam segurança, economia e conformidade tributária.</p>
+    <a href="https://wa.me/5500000000000" target="_blank">Fale pelo WhatsApp</a>
+  </section>
+
+  <section id="servicos">
+    <h3>Áreas de Atuação</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Consultoria Tributária</h4>
+        <p>Reduza riscos fiscais e otimize a carga tributária da sua empresa com orientações personalizadas.</p>
+      </div>
+      <div class="card">
+        <h4>Defesa em Processos Fiscais</h4>
+        <p>Atuação em contencioso administrativo e judicial com foco na defesa contra autuações indevidas.</p>
+      </div>
+      <div class="card">
+        <h4>Planejamento Tributário</h4>
+        <p>Estratégias legais para maximizar a eficiência fiscal e garantir conformidade com a legislação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h3>Sobre a Profissional</h3>
+    <p>Com mais de 10 anos de experiência, a Dra. Carolina Mendes atua com excelência na área tributária, auxiliando empresas na gestão eficiente de tributos e oferecendo soluções jurídicas sob medida.</p>
+  </section>
+
+  <section id="contato">
+    <h3>Entre em Contato</h3>
+    <p>Agende uma consulta para discutir as necessidades jurídicas da sua empresa.</p>
+    <a href="https://wa.me/5500000000000" target="_blank" style="display:inline-block; background:#00b894; color:#fff; padding:15px 30px; border-radius:30px; font-weight:bold; text-decoration:none;">Contatar via WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Dra. Carolina Mendes - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="#">&#xf08c;</a> <!-- LinkedIn -->
+      <a href="#">&#xf16d;</a> <!-- Instagram -->
+      <a href="#">&#xf09a;</a> <!-- Facebook -->
+    </div>
+  </footer>
+
+</bo
